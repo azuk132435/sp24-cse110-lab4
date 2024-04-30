@@ -25,3 +25,30 @@
 12. A. student.name B.student['Grad Year'] C.student.greeting(); D.student['Favorite Teacher'].name E.student.courseLoad[0]
 
 13.
+A. This will output '32' because the + operator when done on strings concatenates. So it concats the 2 on the 3 resulting in '32' <br>
+B. This will output 1 because the - operator, JS converts the operands to numbers. This makes the '3' become a 3 and then 2 is subtracted resulting in 1.<br>
+C. This will result in 3 because null is treated as a 0 in numerical context. 3 + 0 = 3.<br>
+D. This will output '3null' because similar to A it will concat strings together so it takes the 3 and concats the letters null onto it resulting in teh string '3null'.<br>
+E. This will ouput 4. This is because true in JS is converted to a 1 in numerical context. 1 + 3 = 4.<br>
+F. This will output 0. This is because in JS false and null when in numerical context both becomes 0. 0 + 0 = 0.<br>
+G. This will output '3undefined' because once again the + will concat strings together adding the undefined to the 3.<br>
+H. This will output NaN because when trying to run an arithmetic operation with undefined JS converts undefed to NaN. Subtracting NaN from 3 results in NaN.<br>
+
+14.
+A.This would output true. This is because when comparing 2 types here the string will be converted to a number and 2 is > 1.<br>
+B.This would result in false. This is because when comparing 2 strings JS compares them character by character left to right. Since '2' is compared to '1' the result is false as 2 is > 1.<br>
+C.This would result in true. The ==  allows for type coercion. This would make the string '2' convert to the number 2 and 2 == 2 evalutes to True.<br>
+D.This would result in false. This would be false. This is because the === operator is a strict equality comparison without type coercion so since they are different types it evaultes to false.<br>
+E.This would result in false. This would result in false because when comparing a boolean to a non-boolean value the boolean is converted to a number. So here true becomes a 1, and 1 == 2 evaluates to false.<br>
+F.This would result in true. This is because Boolean(of any non-zero number) is considered true. This results in a direct comparison between 2 booleans being true === true which is true.<br>
+
+15.So == is the equality operator and it checks for equality after doing type coercion if the operads are different types. Effectively JS tries to convert them to the same type before comparison allowing things like 1 == '1' to be true. === is the stric equality operator that checks for equality without perform the coerction. So with the samne example 1 === '1' this would be false as it takes a strict comparison of the two with no type changing.
+
+16. [file 16](part2-question16.js)
+
+17.This will return the array [2,4,6]. modifyArray initailzes newArr as an empty array. It then enters a loop from i = 0 to 2. In each iteration doSomething is called in which the current elemnt of the array is being multipled by 2 having 1,2,3 become 2,4,6. They are then pushed onto the newArr and this is returned.
+
+18. [file 18](part2-question18.js)
+
+19. The output is 1 4 3 2 each on seperate lines. This is due to first the 1 is logged. Then there is a 1 second delay to log the 2. During this time log(3) is added into a queue. Then the console logs 4. After this is done the call stack is empty which allows JS to pick the first item from the queue being log 3. Lastly after that 1 second delay 2 is logged last.
+
